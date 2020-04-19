@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://kit.fontawesome.com/178629f1f7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins|Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="./favicons/faviconBM.ico" />
+    <link rel="shortcut icon" href="./favicons/faviconBM.ico" />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/styleBM.css" />
+
+    <title>Beatmaker</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <h4>BeatMaker</h4>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="./index.html">Home</a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <button class="dropdown-btn">
+              Projects <i class="fas fa-caret-down rotate"></i>
+            </button>
+            <div class="drop">
+              <ul>
+                <li>
+                  <a href="./beatmaker.html">BeatMaker</a>
+                </li>
+                <li>
+                  <a href="./todolist.html">ToDo List</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="./about.html">About</a>
+        </li>
+        <li>
+          <a href="#">Image Gallery</a>
+        </li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="sequencer">
+        <div class="kick-track">
+          <div class="controls">
+            <h1>Kick</h1>
+            <button data-track="0" class="mute kick-volume">
+              <i class="fas fa-microphone-slash"></i>
+            </button>
+            <select name="kick-select" id="kick-select">
+              <option value="./soundsBM/kick-classic.wav">Classic Kick</option>
+              <option value="./soundsBM/kick-808.wav">808 Kick</option>
+              <option value="./soundsBM/kick-heavy.wav">Kick Heavy</option>
+              <option value="./soundsBM/kick-softy.wav">Kick Softy</option>
+              <option value="./soundsBM/kick-electro01.wav"
+                >Electro Kick 01</option
+              >
+              <option value="./soundsBM/kick-electro02.wav"
+                >Electro Kick 02</option
+              >
+              <option value="./soundsBM/kick-deep.wav">Deep Kick</option>
+              <option value="./soundsBM/kick-dry.wav">Dry Deep</option>
+              <option value="./soundsBM/kick-floppy.wav">Floppy Deep</option>
+              <option value="./soundsBM/kick-oldschool.wav"
+                >Oldschool Kick</option
+              >
+            </select>
+          </div>
+          <div class="kick">
+            <div class="pad kick-pad b0"></div>
+            <div class="pad kick-pad b1"></div>
+            <div class="pad kick-pad b2"></div>
+            <div class="pad kick-pad b3"></div>
+            <div class="pad kick-pad b4"></div>
+            <div class="pad kick-pad b5"></div>
+            <div class="pad kick-pad b6"></div>
+            <div class="pad kick-pad b7"></div>
+          </div>
+        </div>
+        <div class="snare-track">
+          <div class="controls">
+            <h1>Snare</h1>
+            <button data-track="1" class="mute snare-volume">
+              <i class="fas fa-microphone-slash"></i>
+            </button>
+            <select name="snare-select" id="snare-select">
+              <option value="./soundsBM/snare-acoustic01.wav"
+                >Acoustic Snare 01</option
+              >
+              <option value="./soundsBM/snare-acoustic02.wav"
+                >Acoustic Snare 02</option
+              >
+              <option value="./soundsBM/snare-808.wav">808 Snare</option>
+              <option value="./soundsBM/snare-vinyl02.wav">Snare Vinyl</option>
+              <option value="./soundsBM/snare-brute.wav">Brute Snare</option>
+              <option value="./soundsBM/snare-block.wav">Block Snare</option>
+              <option value="./soundsBM/snare-electro.wav"
+                >Electro Snare</option
+              >
+              <option value="./soundsBM/snare-punch.wav">Punch Snare</option>
+              <option value="./soundsBM/snare-noise.wav">Noise Snare</option>
+              <option value="./soundsBM/snare-pinch.wav">Pinch Snare</option>
+            </select>
+          </div>
+          <div class="snare">
+            <div class="pad snare-pad b0"></div>
+            <div class="pad snare-pad b1"></div>
+            <div class="pad snare-pad b2"></div>
+            <div class="pad snare-pad b3"></div>
+            <div class="pad snare-pad b4"></div>
+            <div class="pad snare-pad b5"></div>
+            <div class="pad snare-pad b6"></div>
+            <div class="pad snare-pad b7"></div>
+          </div>
+        </div>
+        <div class="hihat-track">
+          <div class="controls">
+            <h1>Hihat</h1>
+            <button data-track="2" class="mute hihat-volume">
+              <i class="fas fa-microphone-slash"></i>
+            </button>
+            <div class="select">
+              <select name="hihat-select" id="hihat-select">
+                <option value="./soundsBM/hihat-acoustic01.wav"
+                  >Acoustic Hihat 01</option
+                >
+                <option value="./soundsBM/hihat-acoustic02.wav"
+                  >Acoustic Hihat 02</option
+                >
+                <option value="./soundsBM/hihat-808.wav">808 Hihat</option>
+                <option value="./soundsBM/hihat-analog.wav"
+                  >Analog Hihat</option
+                >
+                <option value="./soundsBM/hihat-electro.wav"
+                  >Electro Hihat</option
+                >
+                <option value="./soundsBM/hihat-digital.wav"
+                  >Digital Hihat</option
+                >
+                <option value="./soundsBM/hihat-plain.wav">Plain Hihat</option>
+                <option value="./soundsBM/hihat-reso.wav">Reso Hihat</option>
+                <option value="./soundsBM/hihat-dist01.wav"
+                  >Dist Hihat 01</option
+                >
+                <option value="./soundsBM/hihat-dist02.wav"
+                  >Dist Hihat 02</option
+                >
+              </select>
+            </div>
+          </div>
+          <div class="hihat">
+            <div class="pad hihat-pad b0"></div>
+            <div class="pad hihat-pad b1"></div>
+            <div class="pad hihat-pad b2"></div>
+            <div class="pad hihat-pad b3"></div>
+            <div class="pad hihat-pad b4"></div>
+            <div class="pad hihat-pad b5"></div>
+            <div class="pad hihat-pad b6"></div>
+            <div class="pad hihat-pad b7"></div>
+          </div>
+        </div>
+        <button class="play"><i class="fas fa-play"></i></button>
+        <div class="tempo">
+          <input
+            type="range"
+            class="tempo-slider"
+            max="300"
+            min="20"
+            value="150"
+          />
+          <p>Tempo: <span class="tempo-nr">150</span></p>
+        </div>
+      </div>
+    </main>
+
+    <audio class="kick-sound" src="./soundsBM/kick-classic.wav"></audio>
+    <audio class="snare-sound" src="./soundsBM/snare-acoustic01.wav"></audio>
+    <audio class="hihat-sound" src="./soundsBM/hihat-acoustic01.wav"></audio>
+
+    <script src="./scripts/appBM.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
