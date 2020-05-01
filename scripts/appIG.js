@@ -114,9 +114,7 @@ darkmodeBtn.addEventListener("click", () => {
   darkmode = localStorage.getItem("darkmode");
   if (darkmode !== "enabled") {
     enableDarkmode();
-    console.log(darkmode);
   } else {
     disableDarkmode();
-    console.log(darkmode);
   }
 });
