@@ -1,6 +1,6 @@
 body {
   font-family: "Roboto Slab", serif;
-  transition: all 0.2s ease;
+  transition: background 0.2s ease;
 }
 
 .darkmode {
@@ -29,7 +29,7 @@ body {
   font-size: 1.4rem;
 }
 .error a {
-  color: #393f8b;
+  color: #414345;
   font-weight: bold;
   font-size: 2rem;
   margin: 2rem 0;
