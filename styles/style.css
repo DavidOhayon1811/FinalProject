@@ -91,7 +91,7 @@ button {
 .dropdown-active {
   visibility: visible;
   /* opacity: 1; */
-  transform: translateY(0px);
+  transform: translateY(0);
 }
 .rotate {
   transition: all 0.18s linear;

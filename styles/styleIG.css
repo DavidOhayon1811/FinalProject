@@ -1,0 +1,112 @@
+body {
+  font-family: "Roboto Slab", serif;
+  transition: all 0.2s ease;
+}
+
+.darkmode {
+  float: right;
+  margin: 1rem 1rem;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1rem;
+  background: #22327a;
+  color: white;
+  cursor: pointer;
+}
+.darkmode-active {
+  background: #0f2027;
+  color: #dcdcdc;
+}
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #eb5757;
+  letter-spacing: 2.5px;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.error a {
+  color: #393f8b;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  min-height: 30vh;
+  justify-content: center;
+  align-items: center;
+}
+.search-form {
+  padding: 2rem;
+  display: flex;
+}
+.search-input {
+  font-size: 2rem;
+  padding: 0.5rem;
+  width: 100%;
+  border: none;
+  border: 2px solid #22327a;
+  outline: none;
+}
+.submit-btn {
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  background: #22327a;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  font-family: "Roboto Slab", serif;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  padding: 2rem 0;
+  width: 90%;
+  margin: auto;
+  row-gap: 5rem;
+  column-gap: 3rem;
+}
+.gallery-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #8e9ca7;
+  padding: 0.5rem 0;
+}
+.gallery-info a {
+  color: #6694b8;
+}
+
+.nav-btn {
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.more {
+  padding: 1rem 3rem;
+  background: #22327a;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-family: "Roboto Slab", serif;
+}
+.plus {
+  font-size: 1rem;
+}

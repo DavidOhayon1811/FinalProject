@@ -8,23 +8,27 @@
       href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/178629f1f7.js"
       crossorigin="anonymous"
     ></script>
 
-    <link rel="icon" href="./favicons/favicon.ico" />
-    <link rel="shortcut icon" href="./favicons/favicon.ico" />
+    <link rel="icon" href="./favicons/faviconIG.ico" />
+    <link rel="shortcut icon" href="./favicons/faviconIG.ico" />
 
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/styleHome.css" />
+    <link rel="stylesheet" href="./styles/styleIG.css" />
 
-    <title>Final Project</title>
+    <title>Image Gallery</title>
   </head>
   <body>
     <nav>
       <div class="logo">
-        <h4>Final project</h4>
+        <h4>Image Gallery</h4>
       </div>
       <ul class="nav-links">
         <li>
@@ -61,10 +65,28 @@
       </div>
     </nav>
 
-    <main class="home-content">
-      <p>Hello</p>
+    <button class="darkmode"><i class="fas fa-adjust"></i></button>
+
+    <header>
+      <form class="search-form">
+        <input type="text" name="search" class="search-input" />
+        <button type="submit" class="submit-btn">
+          <i class="fas fa-search fa-lg"></i>
+        </button>
+      </form>
+    </header>
+
+    <main>
+      <div class="gallery"></div>
+      <div class="error"></div>
     </main>
+    <div class="nav-btn">
+      <button class="more">
+        More &nbsp;<i class="fas fa-search-plus plus"></i>
+      </button>
+    </div>
 
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/appIG.js"></script>
   </body>
 </html>
