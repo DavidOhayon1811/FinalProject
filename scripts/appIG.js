@@ -61,7 +61,7 @@ async function searchPhotos(search) {
   if (data.photos.length === 0) {
     const error = document.createElement("span");
     const back = document.createElement("a");
-    back.setAttribute("href", "./ImageGallery.html");
+    back.setAttribute("href", "./imageGallery.html");
     error.innerHTML = `
         A NEW SEARCH TRY ?
         <br>
