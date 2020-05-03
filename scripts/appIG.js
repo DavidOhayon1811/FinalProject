@@ -39,7 +39,7 @@ function generatePhotos(data) {
     galleryImg.classList.add("gallery-img");
     galleryImg.innerHTML = `
         <div class="gallery-info">
-            <p>${photo.photographer}</p>
+            <p>Photographer: ${photo.photographer}</p>
             <a href=${photo.src.original} target="_blank">Download</a>
         </div>
         <img src=${photo.src.large}></img>
@@ -97,13 +97,22 @@ curatedPhotos();
 
 let darkmode = localStorage.getItem("darkmode");
 const darkmodeBtn = document.querySelector(".darkmode");
+const pexelImg = document.querySelector(".pexel-img");
+const footer = document.querySelector("footer");
+const pexelLink = footer.querySelector("a");
 
 const enableDarkmode = () => {
   document.body.classList.add("darkmode-active");
+  pexelImg.setAttribute("src", pexelImg.src.replace("black", "white"));
+  footer.classList.add("footer-dark");
+  pexelLink.style.color = "#dcdcdc";
   localStorage.setItem("darkmode", "enabled");
 };
 const disableDarkmode = () => {
   document.body.classList.remove("darkmode-active");
+  pexelImg.setAttribute("src", pexelImg.src.replace("white", "black"));
+  footer.classList.remove("footer-dark");
+  pexelLink.style.color = "#203A43";
   localStorage.setItem("darkmode", null);
 };
 if (darkmode === "enabled") {

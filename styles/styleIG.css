@@ -29,7 +29,7 @@ body {
   font-size: 1.4rem;
 }
 .error a {
-  color: #414345;
+  color: #5f6366;
   font-weight: bold;
   font-size: 2rem;
   margin: 2rem 0;
@@ -108,4 +108,27 @@ header {
 }
 .plus {
   font-size: 1rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: linear-gradient(to right, #2193b0, #6dd5ed);
+  color: white;
+  text-align: center;
+  padding: 0.7rem;
+}
+footer a {
+  color: #203a43;
+}
+.pexel-img {
+  width: 80px;
+  margin: 0 2rem;
+}
+.footer-dark {
+  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
 }
