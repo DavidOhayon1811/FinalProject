@@ -41,7 +41,6 @@ function addTodo(e) {
     //attach final Todo
     todoList.appendChild(todoDiv);
   } else {
-    todoInput.value = "";
     alert("You must write something.");
   }
 }

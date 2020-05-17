@@ -1,11 +1,37 @@
 .home-content {
   min-height: 92vh;
-  background-image: url("https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-image: url("../img/home-pic.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.project-desc {
+  padding: 3rem;
+  font-family: "Baloo 2", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #d3d3d3;
+  width: 90%;
+}
+
+.project-desc a {
+  color: #7ea7c0;
+}
+
+@media screen and (max-width: 1308px) {
+  .project-desc {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .project-desc {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .project-desc {
+    font-size: 11px;
+  }
 }

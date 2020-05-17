@@ -135,12 +135,12 @@ button {
 
 /* mobile */
 @media screen and (max-width: 768px) {
-  body {
+  /* body {
     overflow-x: hidden;
-  }
+  } */
 
   .nav-links {
-    position: absolute;
+    position: fixed;
     right: 0;
     height: 92vh;
     top: 8vh;
@@ -153,7 +153,7 @@ button {
     z-index: 1;
     /* transition: transform 0.5s ease-in; */
   }
-  .nav-links li {
+  .nav-links li:not(.drop-link) {
     opacity: 0;
   }
 
@@ -186,8 +186,4 @@ button {
 }
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
-}
-
-.remove {
-  display: none;
 }

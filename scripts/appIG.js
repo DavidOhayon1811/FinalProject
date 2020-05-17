@@ -2,6 +2,7 @@ const auth = "563492ad6f9170000100000141bc0f91a3904f8bb60475c2e142ba57";
 const gallery = document.querySelector(".gallery");
 const searchInput = document.querySelector(".search-input");
 const form = document.querySelector(".search-form");
+const submitBtn = document.querySelector(".submit-btn");
 let searchValue;
 const more = document.querySelector(".more");
 let page = 1;
@@ -9,17 +10,15 @@ let fetchLink;
 let currentSearch;
 const errorMsg = document.querySelector(".error");
 
-searchInput.addEventListener("input", updateInput);
+searchInput.addEventListener("input", (event) => {
+  searchValue = event.target.value;
+});
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   currentSearch = searchValue; // searchInput value
   searchPhotos(searchValue);
 });
 more.addEventListener("click", loadMore);
-
-function updateInput(event) {
-  searchValue = event.target.value;
-}
 
 async function fetchApi(url) {
   const dataFetch = await fetch(url, {
@@ -55,6 +54,9 @@ async function curatedPhotos() {
 }
 
 async function searchPhotos(search) {
+  if (searchInput.value.trim() === "") {
+    location.reload();
+  }
   clear();
   fetchLink = `https://api.pexels.com/v1/search?query=${search}+query&per_page=15&page=1`;
   const data = await fetchApi(fetchLink);
@@ -99,7 +101,7 @@ let darkmode = localStorage.getItem("darkmode");
 const darkmodeBtn = document.querySelector(".darkmode");
 const pexelImg = document.querySelector(".pexel-img");
 const footer = document.querySelector("footer");
-const pexelLink = footer.querySelector("a");
+const pexelLink = document.querySelector(".pexels-link");
 
 const enableDarkmode = () => {
   document.body.classList.add("darkmode-active");
