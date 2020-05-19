@@ -216,9 +216,6 @@ nav {
   transform: translateX(0);
   transition: transform 0.5s ease-in;
 }
-.overflow {
-  overflow: hidden;
-}
 
 /* links anim */
 @keyframes navLinksFade {
