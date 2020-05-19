@@ -41,8 +41,9 @@ function generatePhotos(data) {
             <p>Photographer: ${photo.photographer}</p>
             <a href=${photo.src.original} target="_blank">Download</a>
         </div>
-        <img src=${photo.src.large}></img>
+        <img src=${photo.src.large2x}></img>
     `;
+
     gallery.appendChild(galleryImg);
   });
 }
@@ -114,7 +115,7 @@ const disableDarkmode = () => {
   document.body.classList.remove("darkmode-active");
   pexelImg.setAttribute("src", pexelImg.src.replace("white", "black"));
   footer.classList.remove("footer-dark");
-  pexelLink.style.color = "#203A43";
+  pexelLink.style.color = "#203a43";
   localStorage.setItem("darkmode", null);
 };
 if (darkmode === "enabled") {

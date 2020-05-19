@@ -1,7 +1,3 @@
-i {
-  pointer-events: none;
-}
-
 nav {
   background: linear-gradient(to right, #ffe259, #ffa751);
 }
@@ -14,16 +10,16 @@ nav {
 .dropdown a {
   color: #dcdcdc;
 }
-.dropdown li:hover {
+.drop-link:hover {
   background: #f45c43;
 }
-.dropdown .dropdown-btn {
+.dropdown-btn {
   color: #4169e1;
 }
-.dropdown .dropdown-btn:hover {
+.dropdown-btn:hover {
   color: #123dbe;
 }
-.dropdown ul {
+.drop {
   background: linear-gradient(to right, #e52d27, #b31217);
 }
 .burger div {
@@ -124,8 +120,6 @@ nav {
   font-size: 1.5rem;
   background: #585858;
   color: white;
-  border: none;
-  cursor: pointer;
   margin-top: 3rem;
   border-radius: 5px;
 }
@@ -161,10 +155,31 @@ nav {
   }
 }
 
+@media screen and (max-width: 1541px) {
+  .kick-pad,
+  .snare-pad,
+  .hihat-pad {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
 @media screen and (max-width: 1061px) {
   .kick-track,
   .snare-track,
   .hihat-track {
     flex-direction: column;
+  }
+  .kick-pad,
+  .snare-pad,
+  .hihat-pad {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+@media screen and (max-width: 512px) {
+  .kick,
+  .snare,
+  .hihat {
+    justify-content: center;
   }
 }

@@ -1,9 +1,22 @@
+/* general */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+i {
+  pointer-events: none;
+}
+select {
+  outline: none;
+}
 
+/* nav */
 nav {
   display: flex;
   justify-content: space-around;
@@ -12,17 +25,12 @@ nav {
   background: linear-gradient(to right, #141e30, #243b55);
   font-family: "Poppins", sans-serif;
 }
-button {
-  outline: none;
-}
-
 .logo {
   color: #dcdcdc;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 20px;
 }
-
 .nav-links {
   display: flex;
   justify-content: space-around;
@@ -38,7 +46,6 @@ button {
   font-weight: bold;
   font-size: 15px;
 }
-
 /* dropdown */
 .dropdown {
   position: relative;
@@ -49,20 +56,18 @@ button {
   /* opacity: 0; */
   transform: translateY(-13px);
   transition: transform 0.35s ease;
-}
-.dropdown ul {
   position: absolute;
-  margin-top: 8px;
-  background: linear-gradient(to right, black, #434343);
+  margin-top: 7px;
+  background: linear-gradient(to right, #232526, #414345);
   border-radius: 5px;
   width: 120px;
-  height: 110px;
+  height: 115px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
-.dropdown li {
+.drop-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,10 +75,10 @@ button {
   height: 100%;
   border-radius: 5px;
 }
-.dropdown li:hover {
+.drop-link:hover {
   background: #2060c7;
 }
-.dropdown .dropdown-btn {
+.dropdown-btn {
   background: none;
   border: none;
   font-family: "Poppins", sans-serif;
@@ -82,10 +87,10 @@ button {
   letter-spacing: 2.5px;
   font-weight: bold;
   font-size: 15px;
-  transition: all 0.15s ease;
+  transition: all 0.2s ease;
   cursor: pointer;
 }
-.dropdown .dropdown-btn:hover {
+.dropdown-btn:hover {
   color: #adacac;
 }
 .dropdown-active {
@@ -99,7 +104,7 @@ button {
 .rotate-active {
   transform: rotate(180deg);
 }
-
+/* end dropdown */
 .burger {
   display: none;
   cursor: pointer;
@@ -112,6 +117,7 @@ button {
   border-radius: 3px;
   transition: all 0.35s ease;
 }
+/* end nav */
 
 /* tablet */
 @media screen and (max-width: 1024px) {
@@ -124,20 +130,16 @@ button {
   .nav-links a {
     font-size: 13px;
   }
-  .dropdown .dropdown-btn {
+  .dropdown-btn {
     font-size: 13px;
-  }
-  .dropdown ul {
-    width: 110px;
-    height: 100px;
   }
 }
 
 /* mobile */
 @media screen and (max-width: 768px) {
-  /* body {
+  body {
     overflow-x: hidden;
-  } */
+  }
 
   .nav-links {
     position: fixed;
@@ -153,6 +155,16 @@ button {
     z-index: 1;
     /* transition: transform 0.5s ease-in; */
   }
+  .nav-links a {
+    font-size: 15px;
+  }
+  .dropdown-btn {
+    font-size: 15px;
+  }
+  .drop {
+    width: 115px;
+    height: 100px;
+  }
   .nav-links li:not(.drop-link) {
     opacity: 0;
   }
@@ -161,12 +173,56 @@ button {
     display: block;
   }
 }
+@media screen and (max-width: 512px) {
+  .nav-links a {
+    font-size: 13px;
+  }
+  .dropdown-btn {
+    font-size: 13px;
+  }
+  .drop {
+    width: 105px;
+    height: 95px;
+  }
+  .logo {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 386px) {
+  .nav-links a {
+    font-size: 10px;
+  }
+  .dropdown-btn {
+    font-size: 10px;
+  }
+  .drop {
+    width: 95px;
+    height: 85px;
+  }
+}
+@media screen and (max-width: 324px) {
+  .nav-links a {
+    font-size: 8px;
+  }
+  .dropdown-btn {
+    font-size: 8px;
+  }
+  .drop {
+    width: 80px;
+    height: 70px;
+  }
+}
 
+/* if nav active */
 .nav-active {
   transform: translateX(0);
   transition: transform 0.5s ease-in;
 }
+.overflow {
+  overflow: hidden;
+}
 
+/* links anim */
 @keyframes navLinksFade {
   from {
     opacity: 0;
@@ -178,6 +234,7 @@ button {
   }
 }
 
+/* burger anim */
 .toggle .line1 {
   transform: rotate(-45deg) translate(-5px, 6px);
 }

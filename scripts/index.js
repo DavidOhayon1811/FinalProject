@@ -14,7 +14,7 @@ const dropDown = () => {
     if (!isActiveBtn && !isActiveDrop) {
       if (dropdown.classList.contains("dropdown-active")) {
         dropdown.classList.remove("dropdown-active");
-        triangle.classList.toggle("rotate-active");
+        triangle.classList.remove("rotate-active");
       }
     }
   });
@@ -26,6 +26,16 @@ const dropDown = () => {
   });
 };
 
+const mql = window.matchMedia("@media screen and (max-width: 768px)");
+
+mql.addEventListener("change", (event) => {
+  if (event.matches) {
+    console.log("mobile");
+  } else {
+    console.log("not mobile");
+  }
+});
+
 const navSlide = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav-links");
@@ -34,6 +44,7 @@ const navSlide = () => {
   burger.addEventListener("click", () => {
     // Toggle nav
     nav.classList.toggle("nav-active");
+    document.body.classList.toggle("overflow");
 
     //Animate links
     navLinks.forEach((link, index) => {
