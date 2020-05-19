@@ -80,7 +80,6 @@ nav {
 }
 .dropdown-btn {
   background: none;
-  border: none;
   font-family: "Poppins", sans-serif;
   color: #dcdcdc;
   text-decoration: none;
@@ -88,7 +87,6 @@ nav {
   font-weight: bold;
   font-size: 15px;
   transition: all 0.2s ease;
-  cursor: pointer;
 }
 .dropdown-btn:hover {
   color: #adacac;

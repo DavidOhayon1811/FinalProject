@@ -7,11 +7,6 @@ input[type="range"] {
   outline: none;
   font-family: "Muli", sans-serif;
 }
-path,
-i,
-svg {
-  pointer-events: none;
-}
 
 nav {
   background: linear-gradient(to right, #c9ced3, #cedce0);

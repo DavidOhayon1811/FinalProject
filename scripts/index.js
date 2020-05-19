@@ -1,12 +1,12 @@
 const dropDown = () => {
   const dropdownBtn = document.querySelector(".dropdown-btn");
   const dropdown = document.querySelector(".drop");
-  const triangle = document.querySelector(".rotate");
+  const caret = document.querySelector(".rotate");
   const dropLinks = dropdown.querySelectorAll("a");
 
   dropdownBtn.addEventListener("click", () => {
     dropdown.classList.toggle("dropdown-active");
-    triangle.classList.toggle("rotate-active");
+    caret.classList.toggle("rotate-active");
   });
   window.addEventListener("click", (event) => {
     let isActiveBtn = dropdownBtn.contains(event.target);
@@ -14,27 +14,19 @@ const dropDown = () => {
     if (!isActiveBtn && !isActiveDrop) {
       if (dropdown.classList.contains("dropdown-active")) {
         dropdown.classList.remove("dropdown-active");
-        triangle.classList.remove("rotate-active");
+        caret.classList.remove("rotate-active");
       }
     }
   });
   dropLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      dropdown.classList.toggle("dropdown-active");
-      triangle.classList.toggle("rotate-active");
+      if (dropdown.classList.contains("dropdown-active")) {
+        dropdown.classList.remove("dropdown-active");
+        caret.classList.remove("rotate-active");
+      }
     });
   });
 };
-
-const mql = window.matchMedia("@media screen and (max-width: 768px)");
-
-mql.addEventListener("change", (event) => {
-  if (event.matches) {
-    console.log("mobile");
-  } else {
-    console.log("not mobile");
-  }
-});
 
 const navSlide = () => {
   const burger = document.querySelector(".burger");

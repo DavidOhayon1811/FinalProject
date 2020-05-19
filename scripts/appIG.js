@@ -129,4 +129,6 @@ darkmodeBtn.addEventListener("click", () => {
   } else {
     disableDarkmode();
   }
+  darkmodeBtn.classList.toggle("rotate-active");
+  console.log(darkmodeBtn.classList.contains("rotate"));
 });
