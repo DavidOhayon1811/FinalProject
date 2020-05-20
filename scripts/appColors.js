@@ -58,7 +58,7 @@ function generateHex() {
 function randomColors() {
   initialColors = [];
 
-  colorDivs.forEach((div, index) => {
+  colorDivs.forEach((div) => {
     const hexText = div.children[0];
     const randomColor = generateHex();
     //Add it to the array

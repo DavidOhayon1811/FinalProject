@@ -55,6 +55,7 @@ async function curatedPhotos() {
 }
 
 async function searchPhotos(search) {
+  let count = 0;
   if (searchInput.value.trim() === "") {
     location.reload();
   }
