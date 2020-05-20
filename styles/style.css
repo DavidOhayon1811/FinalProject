@@ -97,7 +97,7 @@ nav {
   transform: translateY(0);
 }
 .rotate {
-  transition: all 0.18s linear;
+  transition: transform 0.18s linear;
 }
 .rotate-active {
   transform: rotate(180deg);

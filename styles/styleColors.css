@@ -1,45 +1,43 @@
-body {
+.colors {
   font-family: "Muli", sans-serif;
   color: #333333;
 }
-button,
 input[type="range"] {
   outline: none;
   font-family: "Muli", sans-serif;
 }
 
+/* custom nav */
 nav {
   background: linear-gradient(to right, #c9ced3, #cedce0);
 }
-.logo {
+.logo,
+.nav-links a,
+.dropdown-btn {
   color: #141e30;
 }
-.nav-links a {
-  color: #141e30;
-}
-.dropdown a {
-  color: #dcdcdc;
-}
-.dropdown li:hover {
-  background: #3c2991;
-}
-.dropdown .dropdown-btn {
-  color: #141e30;
-}
-.dropdown .dropdown-btn:hover {
-  color: #1d3a70;
-}
-.dropdown ul {
+.drop {
   background: linear-gradient(to right, #1e3c72, #2a5298);
 }
+.drop a {
+  color: #dcdcdc;
+}
+.dropdown-btn:hover {
+  color: #1d3a70;
+}
+.drop-link:hover {
+  background: #3c2991;
+}
 .burger div {
-  background: #4169e1;
+  background: #5548ce;
 }
 @media screen and (max-width: 768px) {
   .nav-links {
     background: linear-gradient(to right, #c9ced3, #cedce0);
   }
 }
+/* end custom nav */
+
 .colors {
   min-height: 76vh;
   display: flex;
@@ -90,12 +88,10 @@ nav {
   top: 0;
   right: 0;
   padding: 0.5rem;
-  border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
-  border: none;
+  border-top-left-radius: 1rem;
   background: #494949;
   color: white;
-  cursor: pointer;
   font-weight: bold;
 }
 .controls {
@@ -114,9 +110,7 @@ nav {
   margin: 1rem;
   padding: 1rem 2rem;
   background: #1b1f57;
-  border: none;
   color: white;
-  cursor: pointer;
   border-radius: 1rem;
 }
 .panel p {
@@ -214,7 +208,6 @@ input[type="range"] {
   border: none;
   border-radius: 10px;
   color: white;
-  cursor: pointer;
 }
 
 .library-popup {
@@ -253,15 +246,14 @@ input[type="range"] {
   color: white;
 }
 
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .panel {
+    height: 30vh;
+  }
+}
 @media screen and (max-width: 1024px) {
   .color h2 {
     font-size: 1.5rem;
-  }
-  .panel button {
-    font-size: 1rem;
-  }
-  .panel p {
-    font-size: 1rem;
   }
   .adjust,
   .lock {
@@ -282,10 +274,11 @@ input[type="range"] {
     font-size: 1.2rem;
   }
   .panel button {
-    font-size: 0.8rem;
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
   }
   .panel p {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .adjust,
   .lock {
@@ -298,5 +291,32 @@ input[type="range"] {
   }
   .save-name {
     font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .color h2 {
+    font-size: 0.8rem;
+  }
+  .adjust,
+  .lock {
+    font-size: 1rem;
+  }
+  .copy-popup h4,
+  .save-popup h4,
+  .library-popup h4 {
+    font-size: 1rem;
+  }
+  .save-name {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 386px) {
+  .panel button {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.7rem;
+  }
+  .panel p {
+    font-size: 0.8rem;
   }
 }

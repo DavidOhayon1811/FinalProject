@@ -1,3 +1,4 @@
+/* main content */
 .home-content {
   min-height: 92vh;
   background-image: url("../img/home-pic.jpg");
@@ -7,8 +8,8 @@
   background-attachment: fixed;
 }
 
+/* text and lists */
 .project-desc {
-  /* top | horizontal | bottom */
   padding: 3rem 5rem 1rem;
   font-family: "Baloo 2", sans-serif;
   font-weight: bold;
@@ -16,10 +17,12 @@
   color: #d3d3d3;
 }
 
+/* link */
 .project-desc a {
   color: #7ea7c0;
 }
 
+/* tablet */
 @media screen and (max-width: 1308px) {
   .project-desc {
     font-size: 18px;
@@ -36,6 +39,8 @@
     padding: 1.5rem 2.5rem 0.75rem;
   }
 }
+
+/* mobile */
 @media screen and (max-width: 512px) {
   .project-desc {
     font-size: 13px;

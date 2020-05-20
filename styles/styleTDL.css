@@ -1,42 +1,42 @@
+/* custom nav */
 nav {
   background: linear-gradient(to right, #ee9ca7, #ffdde1);
 }
-.dropdown ul {
+.logo,
+.nav-links a,
+.dropdown-btn {
+  color: #ed213a;
+}
+.drop {
   background: linear-gradient(to right, #2193b0, #5fa6e0);
 }
-.dropdown li:hover {
+.drop a {
+  color: #dcdcdc;
+}
+.dropdown-btn:hover {
+  color: #db5635;
+}
+.drop-link:hover {
   background: #0078b0;
+}
+.burger div {
+  background: #ed213a;
 }
 @media screen and (max-width: 768px) {
   .nav-links {
     background: linear-gradient(to right, #ecacb4, #ffdde1);
   }
 }
-.logo {
-  color: #ed213a;
-}
-.nav-links a {
-  color: #ed213a;
-}
-.dropdown a {
-  color: #dcdcdc;
-}
-.burger div {
-  background: #ed213a;
-}
-.dropdown .dropdown-btn {
-  color: #ed213a;
-}
-.dropdown .dropdown-btn:hover {
-  color: #ed213a;
-}
+/* end custom nav */
 
+/* main */
 .todo-content {
   min-height: 92vh;
   background: linear-gradient(to right, #cb2d3e, #ef473a);
   color: white;
   font-family: "Poppins", sans-serif;
 }
+/* form */
 form {
   min-height: 26vh;
   display: flex;
@@ -44,40 +44,46 @@ form {
   justify-content: center;
   align-items: center;
 }
-form input,
-form button {
+/* input todo */
+.todo-input,
+.todo-button {
   padding: 0.5rem;
   font-size: 2rem;
   border: none;
   background: white;
 }
-form input {
+.todo-input {
   border-radius: 5px 0 0 5px;
   min-width: 45%;
   outline: none;
 }
-form button {
+.todo-button {
   color: #414345;
   background: #f7fffe;
   cursor: pointer;
   border-radius: 0 5px 5px 0;
   transition: all 0.3s ease;
 }
-form button:hover {
+.todo-button:hover {
   background: #414345;
   color: white;
 }
+/* end input todo */
+/* end form */
+
+/* todo container */
 .todo-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+/* todo list */
 .todo-list {
   min-width: 80%;
   list-style: none;
 }
 
+/* todo div: todo value & delete and save buttons */
 .todo {
   margin: 0.5rem;
   background: white;
@@ -89,13 +95,13 @@ form button:hover {
   transition: all 1s ease;
   border-radius: 5px;
 }
+
+/* select */
 .filter-todo {
   padding: 1rem;
 }
-.todo li {
-  flex: 1;
-}
 
+/* delete and save button */
 .trash-btn,
 .complete-btn {
   background: #ff6f47;
@@ -105,29 +111,33 @@ form button:hover {
   cursor: pointer;
   font-size: 1rem;
 }
+/* delete button */
 .trash-btn {
   border-radius: 0 5px 5px 0;
 }
+/* save button */
 .complete-btn {
-  background: rgb(11, 212, 162);
+  background: #0bd4a2;
 }
+
+/* todo li */
 .todo-item {
+  flex: 1;
   padding: 0 0.5rem;
 }
 
-.fa-trash,
-.fa-check {
-  pointer-events: none;
-}
+/* delete anim */
 .fall {
   transform: translateY(15rem) rotateZ(15deg);
   opacity: 0;
 }
+/* save anim */
 .completed {
   text-decoration: line-through;
   opacity: 0.5;
 }
 
+/* custom select */
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -157,9 +167,11 @@ select {
   pointer-events: none;
   border-radius: 0 5px 5px 0;
 }
+
+/* tablet */
 @media screen and (max-width: 1024px) {
-  form input,
-  form button {
+  .todo-input,
+  .todo-button {
     padding: 0.4rem;
     font-size: 1.5rem;
   }
@@ -177,8 +189,8 @@ select {
   .todo-input {
     margin-left: 17px;
   }
-  form input,
-  form button {
+  .todo-input,
+  .todo-button {
     font-size: 1.2rem;
   }
   .filter-todo {
@@ -196,9 +208,11 @@ select {
     font-size: 0.9rem;
   }
 }
+
+/* mobile */
 @media screen and (max-width: 524px) {
-  form input,
-  form button {
+  .todo-input,
+  .todo-button {
     font-size: 1rem;
   }
   .filter-todo {
@@ -207,7 +221,7 @@ select {
   .select::after {
     padding: 0.4rem 0.4rem;
   }
-  form input::placeholder {
+  .todo-input::placeholder {
     font-size: 13px;
   }
   .todo {
@@ -226,7 +240,7 @@ select {
   .select::after {
     padding: 0.3rem 0.3rem;
   }
-  form input::placeholder {
+  .todo-input::placeholder {
     font-size: 11px;
   }
 }
@@ -237,7 +251,7 @@ select {
   .select::after {
     padding: 0.3rem 0.3rem;
   }
-  form input::placeholder {
+  .todo-input::placeholder {
     font-size: 9px;
   }
 }

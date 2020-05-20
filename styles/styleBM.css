@@ -1,35 +1,33 @@
+/* custom nav */
 nav {
   background: linear-gradient(to right, #ffe259, #ffa751);
 }
-.logo {
-  color: #4169e1;
-}
-.nav-links a {
-  color: #4169e1;
-}
-.dropdown a {
-  color: #dcdcdc;
-}
-.drop-link:hover {
-  background: #f45c43;
-}
+.logo,
+.nav-links a,
 .dropdown-btn {
   color: #4169e1;
+}
+.drop {
+  background: linear-gradient(to right, #e52d27, #b31217);
+}
+.drop a {
+  color: #dcdcdc;
 }
 .dropdown-btn:hover {
   color: #123dbe;
 }
-.drop {
-  background: linear-gradient(to right, #e52d27, #b31217);
+.drop-link:hover {
+  background: #f45c43;
 }
 .burger div {
   background: #4169e1;
 }
 @media screen and (max-width: 768px) {
   .nav-links {
-    background: linear-gradient(to right, #fcc141, #ffa751);
+    background: linear-gradient(to right, #ffe259, #ffa751);
   }
 }
+/* end custom nav */
 
 /* container */
 .sequencer {
@@ -70,8 +68,7 @@ nav {
   margin: 0 2rem;
 }
 .controls select {
-  padding: 1rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   outline: none;
 }
 .mute.active {
@@ -155,7 +152,7 @@ nav {
   }
 }
 
-@media screen and (max-width: 1541px) {
+@media screen and (max-width: 1386px) {
   .kick-pad,
   .snare-pad,
   .hihat-pad {
@@ -163,7 +160,7 @@ nav {
     height: 4.5rem;
   }
 }
-@media screen and (max-width: 1061px) {
+@media screen and (max-width: 1024px) {
   .kick-track,
   .snare-track,
   .hihat-track {
@@ -175,8 +172,89 @@ nav {
     width: 4rem;
     height: 4rem;
   }
+  .controls h1 {
+    font-size: 20px;
+  }
+  .controls .mute {
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
+  .play {
+    padding: 0.875rem 1.75rem;
+    font-size: 1.25rem;
+  }
+  .tempo {
+    width: 38%;
+  }
+  .tempo-slider {
+    padding: 0.15rem;
+  }
+  .tempo p {
+    font-size: 1.3rem;
+  }
 }
+@media screen and (max-width: 768px) {
+  .kick-pad,
+  .snare-pad,
+  .hihat-pad {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .controls h1 {
+    font-size: 17px;
+  }
+  .controls .mute {
+    padding: 0.7rem;
+    font-size: 0.7rem;
+  }
+  .controls select {
+    font-size: 1rem;
+  }
+  .play {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+  .tempo {
+    width: 45%;
+  }
+  .tempo p {
+    font-size: 1rem;
+  }
+}
+
+/* mobile */
 @media screen and (max-width: 512px) {
+  .kick-pad,
+  .snare-pad,
+  .hihat-pad {
+    width: 3rem;
+    height: 3rem;
+  }
+  .controls h1 {
+    font-size: 15px;
+  }
+  .controls .mute {
+    padding: 0.6rem;
+    font-size: 0.6rem;
+  }
+  .controls select {
+    font-size: 0.8rem;
+  }
+  .play {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.75rem;
+  }
+  .tempo {
+    width: 53%;
+  }
+  .tempo-slider {
+    padding: 0.1rem;
+  }
+  .tempo p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 400px) {
   .kick,
   .snare,
   .hihat {

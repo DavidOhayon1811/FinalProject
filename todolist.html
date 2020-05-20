@@ -22,9 +22,10 @@
     <title>ToDo List</title>
   </head>
   <body>
+    <!-- nav region -->
     <nav>
       <div class="logo">
-        <h4>Final project</h4>
+        <h4>ToDo List</h4>
       </div>
       <ul class="nav-links">
         <li>
@@ -61,8 +62,10 @@
         <div class="line3"></div>
       </div>
     </nav>
-
+    <!-- end nav region -->
+    <!-- main todo region -->
     <main class="todo-content">
+      <!-- input & filter todo region -->
       <form>
         <input
           type="text"
@@ -72,7 +75,6 @@
         <button class="todo-button" type="submit">
           <i class="fas fa-plus-square"></i>
         </button>
-
         <div class="select">
           <select name="todos" class="filter-todo">
             <option value="all">All</option>
@@ -80,12 +82,14 @@
             <option value="uncompleted">Uncompleted</option>
           </select>
         </div>
+        <!-- end input & filter todo region -->
       </form>
 
       <div class="todo-container">
         <ul class="todo-list"></ul>
       </div>
     </main>
+    <!-- end main todo region -->
 
     <script src="./scripts/appTDL.js"></script>
     <script src="./scripts/index.js"></script>
