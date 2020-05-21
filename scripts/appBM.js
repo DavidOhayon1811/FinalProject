@@ -2,9 +2,6 @@ class DrumKit {
   constructor() {
     this.pads = document.querySelectorAll(".pad");
     this.playBtn = document.querySelector(".play");
-    this.currentKick = "./soundsBM/kick-classic.wav";
-    this.currentSnare = "./soundsBM/snare-acoustic01.wav";
-    this.currentHihat = "./soundsBM/hihat.acoustic01.wav";
     this.kickAudio = document.querySelector(".kick-sound");
     this.snareAudio = document.querySelector(".snare-sound");
     this.hihatAudio = document.querySelector(".hihat-sound");
@@ -44,11 +41,9 @@ class DrumKit {
   start() {
     const interval = (60 / this.bpm) * 1000;
     //Check if it's playing
-
     if (this.isPlaying) {
       //Clear the interval
       clearInterval(this.isPlaying);
-      console.log(this.isPlaying);
       this.isPlaying = null;
     } else {
       this.isPlaying = setInterval(() => {
@@ -58,7 +53,6 @@ class DrumKit {
   }
   updateBtn() {
     //NULL
-
     if (!this.isPlaying) {
       this.playBtn.innerHTML = `<i class="fas fa-pause"></i>`;
       this.playBtn.classList.add("active");
@@ -113,7 +107,7 @@ class DrumKit {
   }
   changeTempo(e) {
     const tempoText = document.querySelector(".tempo-nr");
-    tempoText.innerText = e.target.value;
+    tempoText.innerHTML = e.target.value;
   }
   updateTempo(e) {
     this.bpm = e.target.value;
@@ -129,7 +123,9 @@ class DrumKit {
 const drumKit = new DrumKit();
 
 //Event Listeners
-
+document.addEventListener("DOMContentLoaded", () => {
+  drumKit.tempoSlider.value = "150";
+});
 drumKit.pads.forEach((pad) => {
   pad.addEventListener("click", drumKit.activePad);
   pad.addEventListener("animationend", function () {

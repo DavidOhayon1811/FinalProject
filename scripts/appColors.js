@@ -1,7 +1,7 @@
 //Global selections and variables
 const colorDivs = document.querySelectorAll(".color");
 const generateBtn = document.querySelector(".generate");
-const sliders = document.querySelectorAll('input[type="range"]');
+const sliders = document.querySelectorAll(`input[type="range"]`);
 const currentHexes = document.querySelectorAll(".color h2");
 const popup = document.querySelector(".copy-container");
 const adjustButton = document.querySelectorAll(".adjust");
@@ -49,11 +49,11 @@ lockButton.forEach((button, index) => {
 });
 
 //Functions
-//Color Generator
-function generateHex() {
+// Generate random color
+const generateHex = () => {
   const hexColor = chroma.random();
   return hexColor;
-}
+};
 
 function randomColors() {
   initialColors = [];
@@ -93,6 +93,7 @@ function randomColors() {
   });
 }
 
+// Changes text color in terms of the contrast
 function checkTextContrast(color, text) {
   const luminance = chroma(color).luminance();
   if (luminance > 0.5) {
@@ -242,14 +243,6 @@ function savePalette(e) {
     colors.push(hex.innerText);
   });
   //Generate Object
-  //*1
-  // const paletteObjects = JSON.parse(localStorage.getItem("palettes"));
-  // let paletteNr;
-  // if (paletteObjects) {
-  //   paletteNr = paletteObjects.length;
-  // } else {
-  //   paletteNr = savedPalettes.length;
-  // }
 
   let paletteNr;
   const paletteObjects = JSON.parse(localStorage.getItem("palettes"));
@@ -330,8 +323,6 @@ function getLocal() {
     localPalettes = [];
   } else {
     const paletteObjects = JSON.parse(localStorage.getItem("palettes"));
-    // *2
-
     savedPalettes = [...paletteObjects];
     paletteObjects.forEach((paletteObj) => {
       //Generate the palette for Library
